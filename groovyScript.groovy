@@ -1,4 +1,3 @@
-
 createdRelease = xlr {
     release("Hello world release") {
         description "Hello world release description"
