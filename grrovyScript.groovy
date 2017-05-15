@@ -1,5 +1,5 @@
 createdRelease = xlr {
-    release("Hello world release") {
+    release("Hello world groovy release") {
         description "Hello world release description"
         phases {
             phase {
