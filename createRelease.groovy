@@ -17,7 +17,8 @@ Release createdRelease = xlr {
     scriptUserPassword 'Password'
     phases {
       phase('New Phase') {
-        tasks {
+        task {
+          description('This is the Remote Unix Script')
           custom('uname') {
             script {
               type 'remoteScript.Unix'
