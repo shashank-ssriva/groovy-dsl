@@ -29,10 +29,11 @@ Release createdRelease = xlr {
               privateKeyFile '${global.rundeckkeyfile}'
             }
           }
-          task('RemoteUnixScript') {
-            description('This is the Remote Unix Script')
+          task('Task A') {
+            description('This is a demo task')
             watchers('admin')
             owner('shashank')
+            tags('demo')
           }
         }
       }
