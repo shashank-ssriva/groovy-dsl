@@ -27,7 +27,6 @@ Release createdRelease = xlr {
       }
     }
   }
-}
 releaseVariables["releaseID"] = createdRelease.id
 print "\n This is the Release ID of the newly created Release : - \n"
 print releaseVariables["releaseID"]
