@@ -1,6 +1,6 @@
 import com.xebialabs.xlrelease.domain.Release
 Release createdRelease = xlr {
-  release('New Uname') {
+  release('Add Watcher') {
     variables {
       stringVariable('output') {
         required false
@@ -17,18 +17,6 @@ Release createdRelease = xlr {
     scriptUserPassword 'Password'
     phases {
       phase('New Phase') {
-        tasks {
-          custom('uname') {
-            script {
-              type 'remoteScript.Unix'
-              script 'uname -a'
-              output variable('output')
-              err variable('err')
-              address 'localhost'
-              username '${global.rundeckuser}'
-              privateKeyFile '${global.rundeckkeyfile}'
-            }
-          }
           task('Task A') {
             description('This is a demo task')
             watchers('admin')
