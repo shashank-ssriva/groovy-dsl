@@ -1,6 +1,6 @@
 import com.xebialabs.xlrelease.domain.Release
 Release createdRelease = xlr {
-  release('uname') {
+  release('New Uname') {
     variables {
       stringVariable('output') {
         required false
