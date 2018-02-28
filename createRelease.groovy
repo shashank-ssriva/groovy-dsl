@@ -31,6 +31,7 @@ Release createdRelease = xlr {
           }
           task('RemoteUnixScript') {
             description('This is the Remote Unix Script')
+            watchers('admin')
           }
         }
       }
