@@ -27,6 +27,7 @@ Release createdRelease = xlr {
               address 'localhost'
               username '${global.rundeckuser}'
               privateKeyFile '${global.rundeckkeyfile}'
+              watchers 'shashank'
             }
           }
         }
