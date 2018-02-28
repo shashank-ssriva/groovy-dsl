@@ -18,6 +18,7 @@ Release createdRelease = xlr {
     phases {
       phase('New Phase') {
         tasks {
+          watchers 'shashank'
           custom('uname') {
             script {
               type 'remoteScript.Unix'
@@ -27,7 +28,6 @@ Release createdRelease = xlr {
               address 'localhost'
               username '${global.rundeckuser}'
               privateKeyFile '${global.rundeckkeyfile}'
-              watchers 'shashank'
             }
           }
         }
