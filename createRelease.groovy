@@ -18,7 +18,7 @@ Release createdRelease = xlr {
     phases {
       phase('New Phase') {
         tasks {
-          description 'Remote Unix Script'
+          description('Remote Unix Script')
           custom('uname') {
             script {
               type 'remoteScript.Unix'
