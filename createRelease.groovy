@@ -18,19 +18,19 @@ Release createdRelease = xlr {
     phases {
       phase('New Phase') {
         tasks {
+          custom('uname') {
+            script {
+              type 'remoteScript.Unix'
+              script 'uname -a'
+              output variable('output')
+              err variable('err')
+              address 'localhost'
+              username '${global.rundeckuser}'
+              privateKeyFile '${global.rundeckkeyfile}'
+            }
+          }
           task('RemoteUnixScript') {
             description('This is the Remote Unix Script')
-            custom('uname') {
-              script {
-                type 'remoteScript.Unix'
-                script 'uname -a'
-                output variable('output')
-                err variable('err')
-                address 'localhost'
-                username '${global.rundeckuser}'
-                privateKeyFile '${global.rundeckkeyfile}'
-              }
-            }
           }
         }
       }
