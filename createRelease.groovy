@@ -17,20 +17,20 @@ Release createdRelease = xlr {
     scriptUserPassword 'Password'
     phases {
       phase('New Phase') {
-        task('Remote Script Task') {
+        task('RST') {
           description('This is the Remote Unix Script')
           tasks {
-          custom('uname') {
-            script {
-              type 'remoteScript.Unix'
-              script 'uname -a'
-              output variable('output')
-              err variable('err')
-              address 'localhost'
-              username '${global.rundeckuser}'
-              privateKeyFile '${global.rundeckkeyfile}'
+            custom('uname') {
+              script {
+                type 'remoteScript.Unix'
+                script 'uname -a'
+                output variable('output')
+                err variable('err')
+                address 'localhost'
+                username '${global.rundeckuser}'
+                privateKeyFile '${global.rundeckkeyfile}'
+              }
             }
-          }
           }
         }
       }
