@@ -17,6 +17,18 @@ Release createdRelease = xlr {
     scriptUserPassword 'Password'
     phases {
       phase('New Phase') {
+        tasks {
+          custom('uname') {
+            script {
+              type 'remoteScript.Unix'
+              script 'uname -a'
+              output variable('output')
+              err variable('err')
+              address 'localhost'
+              username '${global.rundeckuser}'
+              privateKeyFile '${global.rundeckkeyfile}'
+            }
+          }
           task('Task A') {
             description('This is a demo task')
             watchers('admin')
@@ -27,6 +39,7 @@ Release createdRelease = xlr {
       }
     }
   }
+}
 releaseVariables["releaseID"] = createdRelease.id
 print "\n This is the Release ID of the newly created Release : - \n"
 print releaseVariables["releaseID"]
