@@ -18,7 +18,7 @@ Release createdRelease = xlr {
     phases {
       phase('New Phase') {
         tasks {
-          watchers 'shashank'
+          watchers 'admin'
           custom('uname') {
             script {
               type 'remoteScript.Unix'
